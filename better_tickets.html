@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Support Tickets</title>
+    <style>
+        :root {
+            --background-color: #f7f7f7;
+            --container-background: #fff;
+            --text-color: #4b5563;
+            --heading-color: #2563eb;
+            --subheading-color: #1d4ed8;
+            --example-background: #f9fafb;
+            --example-border: #e5e7eb;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #1a202c;
+            --container-background: #2d3748;
+            --text-color: #e2e8f0;
+            --heading-color: #63b3ed;
+            --subheading-color: #4299e1;
+            --example-background: #2a4365;
+            --example-border: #4a5568;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .container {
+            background: var(--container-background);
+            max-width: 800px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--subheading-color);
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .example {
+            background-color: var(--example-background);
+            border: 1px solid var(--example-border);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--heading-color);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .toggle-button:hover {
+            background-color: var(--subheading-color);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: var(--heading-color);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-button" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h1>Help Us Help You!</h1>
+        <p>
+            Submitting a support ticket with insufficient details can significantly delay the resolution of your issue. When you provide a vague description like <em>"We have an issue, please call me,"</em> it becomes challenging for our team to diagnose the problem and offer an effective solution quickly. 
+        </p>
+        <p>
+            To make the support process more efficient, we encourage you to include as much relevant information as possible when submitting a ticket. Clear and concise communication ensures that we can assist you faster and more effectively.
+        </p>
+
+        <h2>Why Details Matter</h2>
+        <p>
+            When you provide comprehensive details upfront, our support team can understand the nature of the issue without needing to request additional information. This reduces back-and-forth communication and allows us to focus on solving your problem immediately. 
+        </p>
+        <p>
+            Think of it this way: The more clues you provide, the easier it is for us to locate the root of the issue and resolve it. 
+        </p>
+
+        <h2>What to Include in Your Ticket:</h2>
+        <p>Here are some key details that can help us assist you better:</p>
+        <ul>
+            <li><strong>A clear description:</strong> Explain the problem in detail. What happened? Where did it happen? When did it start?</li>
+            <li><strong>Steps to reproduce:</strong> If the issue is recurring, provide the steps we can follow to recreate the problem.</li>
+            <li><strong>Error messages or screenshots:</strong> Attach any relevant screenshots or copy error messages to help us pinpoint the issue.</li>
+            <li><strong>Account or order details:</strong> Provide any IDs or references related to your account or order that are relevant to the issue.</li>
+        </ul>
+
+        <h2>Example of a Great Ticket:</h2>
+        <div class="example">
+            <p><strong>Subject:</strong> Unable to log in to my account</p>
+            <p><strong>Description:</strong> I attempted to log in to my account using my email (user@example.com), but I repeatedly receive an error message stating, "Invalid credentials." I have already tried resetting my password twice, but the issue persists. This started happening today at around 2 PM (UTC).</p>
+        </div>
+
+        <h2>Help Us Help You</h2>
+        <p>
+            The more detailed and specific you can be in your support ticket, the quicker we can get to work on resolving your issue. By collaborating with us and providing the necessary information upfront, we can ensure a smoother and faster support process for everyone. Let’s work together to solve your problem as efficiently as possible!
+        </p>
+
+        <div class="footer">
+            <p>Other similar problems: <a href="https://dontasktoask.com/" target="_blank">Don't Ask to Ask</a>, <a href="https://xyproblem.info/" target="_blank">The XY Problem</a>, <a href="https://nohello.net/en/" target="_blank">No Hello</a></p>
+            <p>If you found this site helpful, consider helping to keep it live via <a href="https://ko-fi.com/zacktw" target="_blank">Ko-fi</a>.</p>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        }
+    </script>
+</body>
+</html>
